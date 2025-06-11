@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaMap, FaWpexplorer } from "react-icons/fa";
 
 function Page() {
   return (
@@ -20,6 +20,14 @@ function Page() {
           className="text-white hover:text-pink-400 text-2xl"
         >
           <FaInstagram />
+        </a>
+        <a
+          href="https://maps.app.goo.gl/T6PAxuVMRanKVXD86"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-green-400 text-2xl"
+        >
+          <FaMap />
         </a>
       </div>
 

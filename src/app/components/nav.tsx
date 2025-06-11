@@ -4,7 +4,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../../public/assets/logo1.png";
+
+import Logo from "../../../public/assets/logosx.png"; 
 
 
 const Nav = () => {
@@ -49,7 +50,7 @@ const Nav = () => {
     >
       <div className="flex justify-between items-center container max-w-10xl max-w-full mx-auto px-4">
       <Link href="/">
-          <Image src={Logo} alt="Logo" width={200} height={200} />
+          <Image src={Logo} alt="Logo" width={100} height={50} />
         </Link>
         <ul className="flex gap-7 text-base">
           <li>
@@ -57,6 +58,7 @@ const Nav = () => {
               ABOUT
             </Link>
           </li>
+         
           <li>
             <Link href="/greenbeans" className={getLinkClass("/greenbeans")}>
               GREEN BEANS

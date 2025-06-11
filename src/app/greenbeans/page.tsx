@@ -3,7 +3,10 @@
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 const slides = [
   {
@@ -23,7 +26,7 @@ const slides = [
   },
 ];
 
-export const greenbeanapage = () => {
+export const Greenbeanspage = () => {
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
     slides: { perView: 1 },
@@ -35,6 +38,8 @@ export const greenbeanapage = () => {
     }, 15000);
     return () => clearInterval(interval);
   }, [slider]);
+
+  const [index, setIndex] = useState(-1);
 
   return (
     <div className="text-white">
@@ -172,8 +177,80 @@ export const greenbeanapage = () => {
       </div>
 
       <br></br>
+      <div className="relative w-full h-[300px] overflow-hidden mt-10">
+        <div className="absolute inset-0 bg-[url('/assets/cfmd.jpg')] bg-cover bg-center flex items-center justify-center transition-transform duration-500 ease-in-out hover:scale-105">
+          <div className="absolute inset-0 bg-black/40" />
+          <h1 className="relative z-10 text-white text-4xl md:text-6xl font-bold text-center">
+            GREEN BEANS
+          </h1>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto mt-20 py-10 px-4 text-gray-800">
+        <div className="flex flex-col md:flex-row gap-10 items-start">
+          {/* ซ้าย: เนื้อหา */}
+          <div className="md:w-2/3 space-y-10">
+            <section>
+              <h2 className="text-3xl text-green-800 mb-2">OUR</h2>
+              <h1 className="text-4xl font-bold text-green-800 mb-6">
+                LOCATION COFFEE PLANTATION
+              </h1>
+              <ul className="list-disc list-inside space-y-1 mb-2 text-lg">
+                <li>
+                  Total area of plantation of 150 hectare in Kongtoun Village,
+                  Paksong district, Champasak province
+                </li>
+                <li>
+                  Located in the middle of Bolaven Plateau: best place for
+                  coffee growing in Laos.
+                </li>
+                <li>Highland with altitude over 1200 masl.</li>
+                <li>
+                  Soil enriched by volcanic ash contained over 69% minerals.
+                </li>
+                <li>With cold and wet weather all year round.</li>
+                <li>Make it the perfect place for coffee cultivation.</li>
+              </ul>
+            </section>
+          </div>
+
+          {/* ขวา: รูปภาพ */}
+          <div className="md:w-1/3 grid gap-4">
+            {["/assets/map1.png"].map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt={`Gallery ${i + 1}`}
+                className="w-full rounded-5xl  cursor-pointer hover:opacity-80 transition"
+                onClick={() => setIndex(i)}
+              />
+            ))}
+
+            <Lightbox
+              open={index >= 0}
+              close={() => setIndex(-1)}
+              slides={["/assets/map1.png", "/assets/map2.png"].map((src) => ({
+                src,
+              }))}
+              index={index}
+            />
+          </div>
+        </div>
+      </div>
+
+      <footer className="bg-green-800 text-white py-6 mt-10">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-5xl font-bold mb-2">LET’S HAVE A CONVERSATION.</p>
+          <a
+            href="mailto:sale@somxaychalern.com"
+            className="text-blue-400 hover:underline text-3xl"
+          >
+            sale@somxaychalern.com
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };
 
-export default greenbeanapage;
+export default Greenbeanspage;

@@ -4,7 +4,7 @@ const homepage = () => {
   return (
     <div>
       <div className="relative w-full h-[900px] overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/assets/suan.jpeg')] bg-cover bg-center flex items-center justify-center transition-transform duration-700 ease-in hover:scale-105">
+        <div className="absolute inset-0 bg-[url('/assets/pok.png')] bg-cover bg-center flex items-center justify-center transition-transform duration-700 ease-in hover:scale-105">
           <div className="absolute inset-0 bg-black/40" />
           <h1 className="relative z-10 text-white text-4xl md:text-6xl font-bold text-center">
             WELLCONE TO SOMXAY COFFEE
