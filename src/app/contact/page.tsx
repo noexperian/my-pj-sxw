@@ -1,4 +1,4 @@
-export const contactpage = async () => {
+export const Contactpage = async () => {
   return (
     <div>
       <div className="relative w-full h-[700px] overflow-hidden">
@@ -62,4 +62,4 @@ export const contactpage = async () => {
     </div>
   );
 };
-export default contactpage;
+export default Contactpage;

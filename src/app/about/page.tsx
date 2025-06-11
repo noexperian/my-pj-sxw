@@ -1,4 +1,4 @@
-export const aboutpage = async () => {
+export const Aboutpage = async () => {
   return (
     <div>
       <div className="relative w-full h-[700px] overflow-hidden">
@@ -126,4 +126,4 @@ export const aboutpage = async () => {
     </div>
   );
 };
-export default aboutpage;
+export default Aboutpage;

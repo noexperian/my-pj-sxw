@@ -3,7 +3,7 @@ import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
-export const historypage = () => {
+export const Historypage = () => {
   const [index, setIndex] = useState(-1);
 
   return (
@@ -125,4 +125,4 @@ export const historypage = () => {
     </div>
   );
 };
-export default historypage;
+export default Historypage;

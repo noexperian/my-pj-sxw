@@ -1,6 +1,6 @@
 import React from "react";
 
-const homepage = () => {
+const Homepage = () => {
   return (
     <div>
       <div className="relative w-full h-[900px] overflow-hidden">
@@ -31,4 +31,4 @@ const homepage = () => {
     </div>
   );
 };
-export default homepage;
+export default Homepage;
