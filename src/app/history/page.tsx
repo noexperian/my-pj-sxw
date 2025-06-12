@@ -9,7 +9,7 @@ export const Historypage = () => {
   return (
     <div>
       <div className="relative w-full h-[700px] overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/assets/pok.png')] bg-cover bg-center flex items-center justify-center transition-transform duration-500 ease-in-out hover:scale-105">
+        <div className="absolute inset-0 bg-[url(/assets/pok.png)] bg-cover bg-center flex items-center justify-center transition-transform duration-500 ease-in-out hover:scale-105">
           <div className="absolute inset-0 bg-black/40" />
           <h1 className="relative z-10 text-white text-4xl md:text-6xl font-bold text-center">
             HISTORY
@@ -58,7 +58,7 @@ export const Historypage = () => {
                   environment.
                 </li>
                 <li>
-                  2021 with Gov't support, we started promoting small holder
+                  2021 with Gov&apos;t support, we started promoting small holder
                   farmers to increase their capacity.
                 </li>
                 <li>
