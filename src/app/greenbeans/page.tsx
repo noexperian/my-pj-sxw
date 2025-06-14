@@ -26,7 +26,7 @@ const slides = [
   },
 ];
 
-export const Greenbeanspage = () => {
+export default function Greenbeanspage(){
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
     slides: { perView: 1 },
@@ -253,4 +253,4 @@ export const Greenbeanspage = () => {
   );
 };
 
-export default Greenbeanspage;
+
