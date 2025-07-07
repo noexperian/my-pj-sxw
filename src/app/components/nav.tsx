@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import Logo from "../../../public/assets/logosx.png";
+import Logo from "../../../public/assets/logob.png";
 
 const Nav = () => {
   const pathname = usePathname();
@@ -38,15 +38,17 @@ const Nav = () => {
 
   return (
     <nav
-      className={`bg-green-900 p-3 fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
+      className={`bg-green-900  fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4">
+         
         {/* Logo */}
         <Link href="/">
-          <Image src={Logo} alt="Logo" width={100} height={50} />
+          <Image src={Logo} alt="Logo" width={100} height={100} />
         </Link>
+       
 
         {/* Desktop menu */}
         <ul className="hidden md:flex gap-6 text-base">
